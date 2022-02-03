@@ -1,5 +1,7 @@
 package Persistence;
 
+import entities.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,6 +29,10 @@ public class UserMapper {
         }
 
 
+        return null;
+    }
+
+    public ArrayList<User> getUserByID(int i) {
         return null;
     }
 }

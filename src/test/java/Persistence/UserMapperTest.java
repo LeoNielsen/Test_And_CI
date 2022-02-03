@@ -1,5 +1,6 @@
 package Persistence;
 
+import entities.User;
 import org.junit.jupiter.api.*;
 
 import java.sql.*;
@@ -49,6 +50,14 @@ class UserMapperTest {
 
         assertEquals(expected, actual);
     }
+
+//    @Test
+//    public void getUserByIDTest(){
+//        ArrayList<User> expected = new ArrayList<>(List.of(new User("Hans", "Hansen", "Hemmelig123","40404040", "Rolighedsvej 3")));
+//        ArrayList<User> actual = new UserMapper().getUserByID(1);
+//
+//        assertEquals(expected, actual);
+//    }
 
 
 
