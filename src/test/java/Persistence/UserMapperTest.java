@@ -46,6 +46,22 @@ class UserMapperTest {
         mapper = new UserMapper();
     }
 
+    @AfterEach
+    void tearDown() {
+        Connection con = null;
+
+        try {
+            DBConnector.setConnection(null);
+            con = DBConnector.connection();
+            String dropTable = "DROP TABLE usertable";
+            Statement stmt = con.createStatement();
+            Boolean rs = stmt.execute(dropTable);
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
 
     @Test
     void getAllUserNames() {
