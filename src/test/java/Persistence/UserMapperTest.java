@@ -3,10 +3,14 @@ package Persistence;
 import org.junit.jupiter.api.*;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserMapperTest {
+
+    UserMapper mapper;
 
     @BeforeEach
     void setUp() {
@@ -38,11 +42,15 @@ class UserMapperTest {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        mapper = new UserMapper();
     }
 
 
     @Test
     void getAllUserNames() {
-        assertEquals(1,1);
+        ArrayList<String> expected = new ArrayList<>(List.of("Hans"));
+        ArrayList<String> actual = mapper.getAllUserNames();
+        assertEquals(expected,actual);
     }
 }
