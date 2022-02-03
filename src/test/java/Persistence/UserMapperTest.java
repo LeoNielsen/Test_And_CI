@@ -55,6 +55,6 @@ class UserMapperTest {
 
         String x = expected.get(0);
         String y = actual.get(0);
-        assertEquals(x,y);
+        assertEquals(null,actual);
     }
 }
