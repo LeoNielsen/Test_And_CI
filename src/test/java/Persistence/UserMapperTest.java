@@ -18,8 +18,8 @@ class UserMapperTest {
         Connection con = null;
         try {
             con = DBConnector.connection();
-            String emptyTable = "Drop Table startcode_test.usertable";
-            con.prepareStatement(emptyTable).executeUpdate();
+//            String emptyTable = "Drop Table startcode_test.usertable";
+//            con.prepareStatement(emptyTable).executeUpdate();
             String createTable = "CREATE TABLE IF NOT EXISTS `startcode_test`.`usertable` (\n" +
                     "  `id` INT NOT NULL AUTO_INCREMENT,\n" +
                     "  `fname` VARCHAR(45) NULL,\n" +
