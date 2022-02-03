@@ -51,6 +51,10 @@ class UserMapperTest {
     void getAllUserNames() {
         ArrayList<String> expected = new ArrayList<>(List.of("Hans"));
         ArrayList<String> actual = mapper.getAllUserNames();
-        assertEquals(expected.get(0),actual.get(0));
+
+
+        String x = expected.get(0);
+        String y = actual.get(0);
+        assertEquals(x,y);
     }
 }
